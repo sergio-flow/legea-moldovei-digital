@@ -31,7 +31,7 @@ const Index = () => {
                   key={book.key}
                   title={book.title}
                   subtitle={book.subtitle}
-                  status={book.status}
+                  status={book.status as any}
                   onClick={() =>
                     book.status === "disponibil"
                       ? navigate(`/book/${book.key}`)
@@ -43,7 +43,7 @@ const Index = () => {
           </section>
         ))}
       </div>
-      <SearchBar />
+      {/* <SearchBar /> */}
     </div>
   );
 };
